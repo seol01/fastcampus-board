@@ -2,28 +2,28 @@ debug: false
 management.endpoints.web.exposure.include: "*"
 
 logging:
- level:
+  level:
     com.fastcampus.board: debug
     org.springframework.web.servlet: debug
     org.hibernate.type.descriptor.sql.BasicBinder: trace
 
 spring:
- datasource:
+  datasource:
     url: jdbc:mysql://localhost:3306/board
-    username: user
-    password: 1234
+    username: root
+    password: rlatjfdk3k
     driver-class-name: com.mysql.cj.jdbc.Driver
- jpa:
-    database: mysql # ???
+  jpa:
+#    database: mysql
     defer-datasource-initialization: true
     hibernate.ddl-auto: create
-#    open-in-view: false
+    #    open-in-view: false
     show-sql: true
     properties:
-        hibernate.format_sql: true
-        hibernate.default_batch_fetch_size: 100
- spring.h2.console.enabled: false
- sql.init.mode: always
- data.reset:
+      hibernate.format_sql: true
+      hibernate.default_batch_fetch_size: 100
+  spring.h2.console.enabled: false
+  sql.init.mode: always
+  data.reset:
     base-path: /api
     spring.data.rest.detection-strategy: annotate
