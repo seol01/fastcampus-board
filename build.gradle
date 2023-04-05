@@ -32,7 +32,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.28'
-
+    // rest api를 위한 dependency
+    implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+    implementation 'org.springframework.data:spring-data-rest-hal-explorer'
 }
 
 tasks.named('test') {
