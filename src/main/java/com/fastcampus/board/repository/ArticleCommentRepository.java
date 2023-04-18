@@ -1,7 +1,7 @@
 package com.fastcampus.board.repository;
 
 import com.fastcampus.board.domain.Article;
-import com.fastcampus.board.domain.ArticleComment;
+import com.fastcampus.board.domain.QArticleComment;
 import com.querydsl.core.types.dsl.DateTimeExpression;
 import com.querydsl.core.types.dsl.StringExpression;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,6 +9,7 @@ import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.data.querydsl.binding.QuerydslBinderCustomizer;
 import org.springframework.data.querydsl.binding.QuerydslBindings;
 import org.springframework.stereotype.Repository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @Repository
 public interface ArticleCommentRepository extends

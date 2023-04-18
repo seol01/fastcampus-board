@@ -10,12 +10,11 @@ import org.springframework.data.querydsl.binding.QuerydslBinderCustomizer;
 import org.springframework.data.querydsl.binding.QuerydslBindings;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import java.util.List;
 @RepositoryRestResource
 public interface ArticleRepository extends
         JpaRepository<Article, Long>,
-        QuerydslPredicateExecutor<Article>, // Article에 있는 검색기능 추가
-        QuerydslBinderCustomizer<QArticle>{
+        QuerydslPredicateExecutor<Article>,
+        QuerydslBinderCustomizer<QArticle> {
 
     // 검색 조건값을 설정한다.
     @Override
@@ -31,9 +30,9 @@ public interface ArticleRepository extends
         bindings.bind(root.createdAt).first(DateTimeExpression::eq);
         bindings.bind(root.creatdBy).first(StringExpression::containsIgnoreCase);
     };
-   List<Article> findAll();
+//   List<Article> findAll();
 
-    long count();
+//    long count();
 
-    Article save(Article of);
+//    Article save(Article of);
 }
